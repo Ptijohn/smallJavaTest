@@ -3,7 +3,7 @@ package Ministere;
 /**
  * Main enterprise class, can and will be derived by subclasses
  */
-public class AutoEntreprise {
+public class AutoEntreprise implements Entreprise {
     /**
      * Siret number of the enterprise, represented as a String in case of zero-starting number
      */
@@ -25,11 +25,11 @@ public class AutoEntreprise {
     }
 
     /**
-     * Compute taxes depending on the CA
-     * @param ca
-     * @return taxes
+     * Computing taxes based on the CA
+     * @param ca the ca
+     * @return taxes computed
      */
-    public static double computeTaxes(double ca){
+    public double computeTaxes(double ca){
         return ca*0.25;
     }
 
